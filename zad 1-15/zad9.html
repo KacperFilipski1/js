@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <div style="color:green;font-size:46px;">
+        <script language="JavaScript">
+            var d1_fil=prompt("dzien1=","");
+            var g1_fil=prompt("godzina1=","");
+            var d2_fil=prompt("dzien2=","");
+            var g2_fil=prompt("godzina2=","");
+            var suma_d, suma_g, suma;
+            var a=parseFloat(d1_fil);
+            var b=parseFloat(d2_fil);
+            var c=parseFloat(g1_fil);
+            var d=parseFloat(g2_fil);
+            suma_d = a - b;
+            suma_d = suma_d * 86400;
+            suma_g = c - d;
+            suma_g = suma_g * 3600;
+            suma = suma_d - suma_g;
+            document.write('Minęło ' + suma + ' sekund.');
+        </script>
+    </div>
+</body>
+</html>
