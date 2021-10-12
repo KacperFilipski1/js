@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+    Wprowadz długość podstawy 1: <input type="number" id="a"><br><br>
+    Wprowadz długość podstawy 2: <input type="number" id="b"><br><br>
+    Wprowadz wysokość: <input type="number" id="h"><br><br>
+
+    <input type="button" value="Oblicz Pole" onclick="javascrip:pow_filipski()"><br><br>
+    <input type="button" value="Oblicz Obwód" onclick="javascrip:obw_filipski()"><br><br>
+
+    <div id="pole"></div><br>
+    <div id="obw"></div>
+
+    <script>
+        function pow_filipski(){
+            var a2 = document.getElementById('a').value;
+            var b2 = document.getElementById('b').value;
+            var h2 = document.getElementById('h').value;
+            var a = parseInt(a2);
+            var b = parseInt(b2);
+            var h = parseInt(h2);
+
+            var pole = (a + b) / 2 * h;
+
+            document.getElementById('pole').innerText = "Pole wynosi " + pole;
+        }
+
+        function obw_filipski(){
+            var a2 = document.getElementById('a').value;
+            var b2 = document.getElementById('b').value;
+            var h2 = document.getElementById('h').value;
+            var a = parseInt(a2);
+            var b = parseInt(b2);
+            var h = parseInt(h2);
+
+            var x = a - b / 2;
+
+            var c = (x * x) + (h * h);
+            c = c / c;
+
+            var obw = a + b + c + c;
+
+            document.getElementById('obw').innerText = "Obwód wynosi " + obw;
+        }
+    </script>
+</body>
+</html>

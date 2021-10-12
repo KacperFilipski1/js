@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="Oblicz pole i obwód" onclick="javascript:oblicz()"><br><br>
+    <div id="obw"></div>
+    <div id="pole"></div>
+
+    <script>
+        function oblicz(){
+            var a_dana_fil = prompt("Podaj a: ");
+            var a = parseInt(a_dana_fil);
+            var b_dana_fil = prompt("Podaj b: ");
+            var b = parseInt(b_dana_fil);
+
+            var obwod, pole;
+            obwod = (2 * a) + (2 * b);
+            pole = a * b;
+
+            document.getElementById('obw').innerText = "Obwód wynosi " + obwod;
+            document.getElementById('pole').innerText = "Pole wynosi " + pole;
+        }
+    </script>
+</body>
+</html>
